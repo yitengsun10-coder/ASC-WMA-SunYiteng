@@ -1,0 +1,91 @@
+{
+  "baseline_real_s": 665.2465497849998,
+  "optimized_v1_real_s": 629.1259787160002,
+  "optimized_v2": {
+    "runtime": {
+      "label": "optimized_v2",
+      "returncode": 0,
+      "real_s": 613.1674232509995,
+      "user_s": 3304.276311,
+      "sys_s": 25.326709,
+      "n_iter": 11,
+      "command": [
+        "/environment/miniconda3/envs/wma_perf/bin/python",
+        "scripts/evaluation/world_model_interaction.py",
+        "--seed",
+        "123",
+        "--ckpt_path",
+        "ckpts/unifolm_wma_dual.ckpt",
+        "--config",
+        "configs/inference/world_model_interaction.yaml",
+        "--bs",
+        "1",
+        "--height",
+        "320",
+        "--width",
+        "512",
+        "--unconditional_guidance_scale",
+        "1.0",
+        "--ddim_steps",
+        "50",
+        "--ddim_eta",
+        "1.0",
+        "--prompt_dir",
+        "unitree_g1_pack_camera/case2/world_model_interaction_prompts",
+        "--dataset",
+        "unitree_g1_pack_camera",
+        "--video_length",
+        "16",
+        "--frame_stride",
+        "6",
+        "--n_action_steps",
+        "16",
+        "--exe_steps",
+        "16",
+        "--n_iter",
+        "11",
+        "--timestep_spacing",
+        "uniform_trailing",
+        "--guidance_rescale",
+        "0.7",
+        "--perframe_ae",
+        "--no-save_intermediate_artifacts",
+        "--no-save_final_tensorboard",
+        "--savedir",
+        "/home/featurize/wma4/results/optimized_v2/output"
+      ]
+    },
+    "psnr": {
+      "gt_video": "/home/featurize/wma4/unifolm-world-model-action/unitree_g1_pack_camera/case2/unitree_g1_pack_camera_case2.mp4",
+      "pred_video": "/home/featurize/wma4/results/optimized_v2/output/inference/50_full_fs6.mp4",
+      "psnr": 24.99625579261398
+    },
+    "gpu": {
+      "samples": 613,
+      "avg_gpu_util_percent": 82.89070146818923,
+      "max_gpu_util_percent": 100.0,
+      "avg_memory_mib": 17044.652528548126,
+      "peak_memory_mib": 19206.0,
+      "avg_power_w": 359.0858075040787,
+      "max_power_w": 414.92
+    },
+    "video": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 512,
+          "height": 320,
+          "r_frame_rate": "8/1",
+          "duration": "22.000000",
+          "nb_frames": "176"
+        }
+      ],
+      "file_size_bytes": 4397404,
+      "sha256": "f067fcdc2d080cf78d173f7d49f5895dc9c21829b823b9699d14529ac7bf9acd"
+    }
+  },
+  "speedup_vs_baseline": 1.0849345946297637,
+  "reduction_vs_baseline_percent": 7.8285451537977515,
+  "additional_reduction_vs_v1_percent": 2.536623189137879
+}

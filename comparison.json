@@ -1,0 +1,194 @@
+{
+  "student": {
+    "name": "孙逸腾",
+    "student_id": "240810010427",
+    "major": "计算机科学与技术",
+    "grade": "大二"
+  },
+  "controlled_variables": {
+    "server": "same Featurize instance",
+    "gpu": "RTX 4090 48G",
+    "case": "unitree_g1_pack_camera/case2",
+    "seed": 123,
+    "ddim_steps": 50,
+    "ddim_eta": 1.0,
+    "resolution": "512x320",
+    "n_iter": 11,
+    "frame_stride": 6,
+    "model": "UnifoLM-WMA-0-Dual",
+    "timing_scope": "new Python process through final video save"
+  },
+  "single_variable": {
+    "baseline": "save 2 TensorBoard videos and 2 MP4 files each iteration",
+    "optimized": "skip per-iteration diagnostics; retain final video"
+  },
+  "baseline": {
+    "runtime": {
+      "label": "baseline",
+      "returncode": 0,
+      "real_s": 665.2465497849998,
+      "user_s": 3478.4339950000003,
+      "sys_s": 28.933005,
+      "n_iter": 11,
+      "save_intermediate_artifacts": true,
+      "command": [
+        "/environment/miniconda3/envs/wma_perf/bin/python",
+        "scripts/evaluation/world_model_interaction.py",
+        "--seed",
+        "123",
+        "--ckpt_path",
+        "ckpts/unifolm_wma_dual.ckpt",
+        "--config",
+        "configs/inference/world_model_interaction.yaml",
+        "--bs",
+        "1",
+        "--height",
+        "320",
+        "--width",
+        "512",
+        "--unconditional_guidance_scale",
+        "1.0",
+        "--ddim_steps",
+        "50",
+        "--ddim_eta",
+        "1.0",
+        "--prompt_dir",
+        "unitree_g1_pack_camera/case2/world_model_interaction_prompts",
+        "--dataset",
+        "unitree_g1_pack_camera",
+        "--video_length",
+        "16",
+        "--frame_stride",
+        "6",
+        "--n_action_steps",
+        "16",
+        "--exe_steps",
+        "16",
+        "--n_iter",
+        "11",
+        "--timestep_spacing",
+        "uniform_trailing",
+        "--guidance_rescale",
+        "0.7",
+        "--perframe_ae",
+        "--savedir",
+        "/home/featurize/wma4/results/baseline/output"
+      ]
+    },
+    "psnr": {
+      "gt_video": "/home/featurize/wma4/unifolm-world-model-action/unitree_g1_pack_camera/case2/unitree_g1_pack_camera_case2.mp4",
+      "pred_video": "/home/featurize/wma4/results/baseline/output/inference/50_full_fs6.mp4",
+      "psnr": 24.99625579261398
+    },
+    "gpu": {
+      "samples": 665,
+      "avg_gpu_util_percent": 76.85563909774436,
+      "max_gpu_util_percent": 100.0,
+      "avg_memory_mib": 17171.75939849624,
+      "peak_memory_mib": 19206.0,
+      "avg_power_w": 339.0702255639095,
+      "max_power_w": 413.74
+    },
+    "video": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 512,
+          "height": 320,
+          "r_frame_rate": "8/1",
+          "duration": "22.000000",
+          "nb_frames": "176"
+        }
+      ],
+      "file_size_bytes": 4397404,
+      "sha256": "f067fcdc2d080cf78d173f7d49f5895dc9c21829b823b9699d14529ac7bf9acd"
+    }
+  },
+  "optimized": {
+    "runtime": {
+      "label": "optimized",
+      "returncode": 0,
+      "real_s": 629.1259787160002,
+      "user_s": 3363.6790009999995,
+      "sys_s": 27.809418,
+      "n_iter": 11,
+      "save_intermediate_artifacts": false,
+      "command": [
+        "/environment/miniconda3/envs/wma_perf/bin/python",
+        "scripts/evaluation/world_model_interaction.py",
+        "--seed",
+        "123",
+        "--ckpt_path",
+        "ckpts/unifolm_wma_dual.ckpt",
+        "--config",
+        "configs/inference/world_model_interaction.yaml",
+        "--bs",
+        "1",
+        "--height",
+        "320",
+        "--width",
+        "512",
+        "--unconditional_guidance_scale",
+        "1.0",
+        "--ddim_steps",
+        "50",
+        "--ddim_eta",
+        "1.0",
+        "--prompt_dir",
+        "unitree_g1_pack_camera/case2/world_model_interaction_prompts",
+        "--dataset",
+        "unitree_g1_pack_camera",
+        "--video_length",
+        "16",
+        "--frame_stride",
+        "6",
+        "--n_action_steps",
+        "16",
+        "--exe_steps",
+        "16",
+        "--n_iter",
+        "11",
+        "--timestep_spacing",
+        "uniform_trailing",
+        "--guidance_rescale",
+        "0.7",
+        "--perframe_ae",
+        "--savedir",
+        "/home/featurize/wma4/results/optimized/output",
+        "--no-save_intermediate_artifacts"
+      ]
+    },
+    "psnr": {
+      "gt_video": "/home/featurize/wma4/unifolm-world-model-action/unitree_g1_pack_camera/case2/unitree_g1_pack_camera_case2.mp4",
+      "pred_video": "/home/featurize/wma4/results/optimized/output/inference/50_full_fs6.mp4",
+      "psnr": 24.99625579261398
+    },
+    "gpu": {
+      "samples": 629,
+      "avg_gpu_util_percent": 81.20031796502384,
+      "max_gpu_util_percent": 100.0,
+      "avg_memory_mib": 17100.68680445151,
+      "peak_memory_mib": 19206.0,
+      "avg_power_w": 355.3387440381558,
+      "max_power_w": 414.59
+    },
+    "video": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 512,
+          "height": 320,
+          "r_frame_rate": "8/1",
+          "duration": "22.000000",
+          "nb_frames": "176"
+        }
+      ],
+      "file_size_bytes": 4397404,
+      "sha256": "f067fcdc2d080cf78d173f7d49f5895dc9c21829b823b9699d14529ac7bf9acd"
+    }
+  },
+  "speedup": 1.057413892115406,
+  "time_reduction_percent": 5.429651770561367
+}

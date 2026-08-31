@@ -1,0 +1,23 @@
+	Command being timed: "/root/autodl-tmp/asc26/envs/wma26/bin/python scripts/evaluation/world_model_interaction.py --seed 124 --ckpt_path ckpts/unifolm_wma_dual.ckpt --config configs/inference/world_model_interaction.yaml --savedir /root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_dual_arm_stackbox_v2/case1/optimized_seed124 --bs 1 --height 320 --width 512 --unconditional_guidance_scale 1.0 --ddim_steps 50 --ddim_eta 1.0 --prompt_dir unitree_z1_dual_arm_stackbox_v2/case1/world_model_interaction_prompts --dataset unitree_z1_dual_arm_stackbox_v2 --video_length 16 --frame_stride 4 --n_action_steps 16 --exe_steps 16 --n_iter 11 --timestep_spacing uniform_trailing --guidance_rescale 0.7 --perframe_ae"
+	User time (seconds): 11675.32
+	System time (seconds): 78.32
+	Percent of CPU this job got: 1104%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:44.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 34134436
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 52
+	Minor (reclaiming a frame) page faults: 15469944
+	Voluntary context switches: 933391
+	Involuntary context switches: 404675
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 174592
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

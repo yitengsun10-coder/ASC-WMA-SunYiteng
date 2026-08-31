@@ -1,0 +1,20 @@
+{
+    "programs": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "h264",
+            "width": 512,
+            "height": 320,
+            "r_frame_rate": "8/1",
+            "nb_frames": "128"
+        }
+    ],
+    "format": {
+        "filename": "/root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_dual_arm_cleanup_pencils/case2/output/inference/50_full_fs4.mp4",
+        "duration": "16.000000",
+        "size": "2253473",
+        "bit_rate": "1126736"
+    }
+}

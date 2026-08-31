@@ -1,0 +1,7 @@
+Comparing:
+Ref: /root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_dual_arm_stackbox_v2/case1/unitree_z1_dual_arm_stackbox_v2_case1.mp4
+Pred: /root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_dual_arm_stackbox_v2/case1/optimized_seed124/inference/5_full_fs4.mp4
+------------------------------
+Video PSNR: 19.0734 dB
+------------------------------
+Result saved to /root/autodl-tmp/asc26/results/wma_optimized_seed124/psnr_result.json

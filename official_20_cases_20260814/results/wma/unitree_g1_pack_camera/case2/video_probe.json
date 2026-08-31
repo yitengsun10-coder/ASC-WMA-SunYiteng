@@ -1,0 +1,20 @@
+{
+    "programs": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "h264",
+            "width": 512,
+            "height": 320,
+            "r_frame_rate": "8/1",
+            "nb_frames": "176"
+        }
+    ],
+    "format": {
+        "filename": "/root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_g1_pack_camera/case2/output/inference/50_full_fs6.mp4",
+        "duration": "22.000000",
+        "size": "4400531",
+        "bit_rate": "1600193"
+    }
+}

@@ -1,0 +1,23 @@
+	Command being timed: "bash /root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_g1_pack_camera/case2/run_world_model_interaction.sh"
+	User time (seconds): 11687.22
+	System time (seconds): 90.52
+	Percent of CPU this job got: 1112%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:38.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 34215996
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 10
+	Minor (reclaiming a frame) page faults: 15098340
+	Voluntary context switches: 942442
+	Involuntary context switches: 405380
+	Swaps: 0
+	File system inputs: 629136
+	File system outputs: 212008
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

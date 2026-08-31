@@ -1,0 +1,9 @@
+{
+  "samples": 665,
+  "avg_gpu_util_percent": 76.85563909774436,
+  "max_gpu_util_percent": 100.0,
+  "avg_memory_mib": 17171.75939849624,
+  "peak_memory_mib": 19206.0,
+  "avg_power_w": 339.0702255639095,
+  "max_power_w": 413.74
+}

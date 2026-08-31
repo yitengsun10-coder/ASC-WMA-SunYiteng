@@ -1,0 +1,23 @@
+	Command being timed: "bash /root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_stackbox/case4/run_world_model_interaction.sh"
+	User time (seconds): 12666.90
+	System time (seconds): 95.87
+	Percent of CPU this job got: 1119%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 18:59.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 34196436
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 131
+	Minor (reclaiming a frame) page faults: 16624902
+	Voluntary context switches: 1017776
+	Involuntary context switches: 440074
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 177472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

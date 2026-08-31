@@ -1,0 +1,79 @@
+$ uname -a
+Linux featurize 5.15.0-105-generic #115-Ubuntu SMP Mon Apr 15 09:52:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+
+$ lscpu
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      48 bits physical, 48 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             14
+On-line CPU(s) list:                0-13
+Vendor ID:                          AuthenticAMD
+Model name:                         AMD EPYC 7453 28-Core Processor
+CPU family:                         25
+Model:                              1
+Thread(s) per core:                 1
+Core(s) per socket:                 1
+Socket(s):                          14
+Stepping:                           1
+BogoMIPS:                           5489.66
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw perfctr_core invpcid_single ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr wbnoinvd arat npt nrip_save umip pku ospke vaes vpclmulqdq rdpid arch_capabilities
+Virtualization:                     AMD-V
+Hypervisor vendor:                  KVM
+Virtualization type:                full
+L1d cache:                          896 KiB (14 instances)
+L1i cache:                          896 KiB (14 instances)
+L2 cache:                           7 MiB (14 instances)
+L3 cache:                           224 MiB (14 instances)
+NUMA node(s):                       1
+NUMA node0 CPU(s):                  0-13
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Mitigation; safe RET, no microcode
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+
+
+$ nvidia-smi
+Tue Aug  4 02:57:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090        Off |   00000000:10:00.0 Off |                  Off |
+| 30%   34C    P8             12W /  450W |       1MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+
+$ /environment/miniconda3/envs/wma_perf/bin/python --version
+Python 3.10.18
+
+
+$ /environment/miniconda3/envs/wma_perf/bin/python -c import torch;print('torch',torch.__version__);print('torch_cuda',torch.version.cuda);print('cuda_available',torch.cuda.is_available());print('gpu',torch.cuda.get_device_name(0));print('vram_bytes',torch.cuda.get_device_properties(0).total_memory)
+torch 2.3.1+cu121
+torch_cuda 12.1
+cuda_available True
+gpu NVIDIA GeForce RTX 4090
+vram_bytes 50866487296
+

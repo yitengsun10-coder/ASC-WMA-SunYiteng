@@ -1,0 +1,57 @@
+--- official
++++ optimized
+@@ -644,29 +644,20 @@
+                     cond_obs_queues = populate_queues(cond_obs_queues,
+                                                       observation)
+ 
+-                # Save the imagen videos for decision-making
+-                sample_tag = f"{args.dataset}-vid{sample['videoid']}-dm-fs-{fs}/itr-{itr}"
+-                log_to_tensorboard(writer,
+-                                   pred_videos_0,
+-                                   sample_tag,
+-                                   fps=args.save_fps)
+-                # Save videos environment changes via world-model interaction
+-                sample_tag = f"{args.dataset}-vid{sample['videoid']}-wd-fs-{fs}/itr-{itr}"
+-                log_to_tensorboard(writer,
+-                                   pred_videos_1,
+-                                   sample_tag,
+-                                   fps=args.save_fps)
+-
+-                # Save the imagen videos for decision-making
+-                sample_video_file = f'{video_save_dir}/dm/{fs}/itr-{itr}.mp4'
+-                save_results(pred_videos_0.cpu(),
+-                             sample_video_file,
+-                             fps=args.save_fps)
+-                # Save videos environment changes via world-model interaction
+-                sample_video_file = f'{video_save_dir}/wm/{fs}/itr-{itr}.mp4'
+-                save_results(pred_videos_1.cpu(),
+-                             sample_video_file,
+-                             fps=args.save_fps)
++                if args.save_intermediate_artifacts:
++                    # Diagnostic artifacts; not used by the final video or PSNR.
++                    sample_tag = f"{args.dataset}-vid{sample['videoid']}-dm-fs-{fs}/itr-{itr}"
++                    log_to_tensorboard(writer, pred_videos_0, sample_tag,
++                                       fps=args.save_fps)
++                    sample_tag = f"{args.dataset}-vid{sample['videoid']}-wd-fs-{fs}/itr-{itr}"
++                    log_to_tensorboard(writer, pred_videos_1, sample_tag,
++                                       fps=args.save_fps)
++                    sample_video_file = f'{video_save_dir}/dm/{fs}/itr-{itr}.mp4'
++                    save_results(pred_videos_0.cpu(), sample_video_file,
++                                 fps=args.save_fps)
++                    sample_video_file = f'{video_save_dir}/wm/{fs}/itr-{itr}.mp4'
++                    save_results(pred_videos_1.cpu(), sample_video_file,
++                                 fps=args.save_fps)
+ 
+                 print('>' * 24)
+                 # Collect the result of world-model interactions
+@@ -798,6 +789,10 @@
+                         type=int,
+                         default=8,
+                         help="fps for the saving video")
++    parser.add_argument('--save_intermediate_artifacts',
++                        action=argparse.BooleanOptionalAction,
++                        default=True,
++                        help='Save per-iteration diagnostics; final video is always saved.')
+     return parser
+ 
+ 

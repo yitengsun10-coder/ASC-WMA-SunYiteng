@@ -1,0 +1,5 @@
+{
+    "gt_video": "/root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_dual_arm_stackbox/case2/unitree_z1_dual_arm_stackbox_case2.mp4",
+    "pred_video": "/root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_dual_arm_stackbox/case2/output/inference/15_full_fs4.mp4",
+    "psnr": 39.72367725966507
+}

@@ -1,0 +1,20 @@
+{
+    "programs": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "h264",
+            "width": 512,
+            "height": 320,
+            "r_frame_rate": "8/1",
+            "nb_frames": "112"
+        }
+    ],
+    "format": {
+        "filename": "/root/autodl-tmp/asc26/repos/unifolm-world-model-action/unitree_z1_dual_arm_stackbox/case3/output/inference/25_full_fs4.mp4",
+        "duration": "14.000000",
+        "size": "2497818",
+        "bit_rate": "1427324"
+    }
+}
