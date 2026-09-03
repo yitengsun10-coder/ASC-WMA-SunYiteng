@@ -1,0 +1,7 @@
+Comparing:
+Ref: unitree_z1_dual_arm_stackbox_v2/case1/unitree_z1_dual_arm_stackbox_v2_case1.mp4
+Pred: /root/autodl-tmp/asc26/results/wma_case1_4090_439/switch3_late090/generated/inference/5_full_fs4.mp4
+------------------------------
+Video PSNR: 25.0749 dB
+------------------------------
+Result saved to /root/autodl-tmp/asc26/results/wma_case1_4090_439/switch3_late090/psnr_result.json

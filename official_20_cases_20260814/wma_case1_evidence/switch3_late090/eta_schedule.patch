@@ -1,0 +1,33 @@
+--- scripts/evaluation/world_model_interaction.py	2026-08-31 22:43:11.580868607 +0800
++++ scripts/evaluation/world_model_interaction_eta_schedule.py	2026-09-03 11:28:49.067625870 +0800
+@@ -555,6 +555,12 @@
+             # Multi-round interaction with the world-model
+             for itr in tqdm(range(args.n_iter)):
+ 
++                # Optional late-stage DDIM eta schedule; defaults preserve baseline.
++                eta_switch_iter = int(os.environ.get("WMA_ETA_SWITCH_ITER", args.n_iter))
++                late_eta = float(os.environ.get("WMA_ETA_LATE", args.ddim_eta))
++                current_ddim_eta = (args.ddim_eta if itr < eta_switch_iter else late_eta)
++                print(f">>> Step {itr}: DDIM eta={current_ddim_eta}")
++
+                 # Get observation
+                 observation = {
+                     'observation.images.top':
+@@ -581,7 +587,7 @@
+                     noise_shape,
+                     action_cond_step=args.exe_steps,
+                     ddim_steps=args.ddim_steps,
+-                    ddim_eta=args.ddim_eta,
++                    ddim_eta=current_ddim_eta,
+                     unconditional_guidance_scale=args.
+                     unconditional_guidance_scale,
+                     fs=model_input_fs,
+@@ -622,7 +628,7 @@
+                     noise_shape,
+                     action_cond_step=args.exe_steps,
+                     ddim_steps=args.ddim_steps,
+-                    ddim_eta=args.ddim_eta,
++                    ddim_eta=current_ddim_eta,
+                     unconditional_guidance_scale=args.
+                     unconditional_guidance_scale,
+                     fs=model_input_fs,

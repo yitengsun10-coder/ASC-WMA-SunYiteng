@@ -1,0 +1,3 @@
+556aedf5f27043c1cc76c8e1e095caa5518cbfb6c0800b6739d405d3271916c0  /root/autodl-tmp/asc26/results/wma_case1_4090_439/switch3_late090/generated/inference/5_full_fs4.mp4
+ad5307f9668e57ca32a2e9890a141caa05250cfe3e3b95913f8156f1cd87a55b  /root/autodl-tmp/asc26/results/wma_case1_4090_439/switch3_late090/psnr_result.json
+9ae73c1bb16bb9cad9fa616e44bf549be76abd7a1053a43e55fa71a1d1d7c526  /root/autodl-tmp/asc26/results/wma_case1_4090_439/switch3_late090/output.log

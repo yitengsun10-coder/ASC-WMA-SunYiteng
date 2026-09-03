@@ -1,0 +1,5 @@
+{
+    "gt_video": "unitree_z1_dual_arm_stackbox_v2/case1/unitree_z1_dual_arm_stackbox_v2_case1.mp4",
+    "pred_video": "/root/autodl-tmp/asc26/results/wma_case1_4090_439/switch3_late090/generated/inference/5_full_fs4.mp4",
+    "psnr": 25.07491633993985
+}
