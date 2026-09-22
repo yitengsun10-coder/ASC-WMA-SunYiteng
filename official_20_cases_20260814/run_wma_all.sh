@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BASE=/root/autodl-tmp/asc26
-RUNNER="$BASE/run_wma_case.sh"
-MASTER="$BASE/results/wma/master_status.tsv"
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+BASE=${WMA_BASE:-/root/autodl-tmp/asc26}
+RUNNER=${WMA_RUNNER:-"$SCRIPT_DIR/run_wma_case.sh"}
+RESULT_ROOT=${WMA_RESULT_ROOT:-"$BASE/results/wma"}
+MASTER="$RESULT_ROOT/master_status.tsv"
 
 mkdir -p "$(dirname "$MASTER")"
 if [[ ! -f "$MASTER" ]]; then
@@ -17,7 +19,7 @@ for scenario in \
   unitree_z1_dual_arm_stackbox_v2 \
   unitree_z1_stackbox; do
   for case_id in case1 case2 case3 case4; do
-    status="$BASE/results/wma/$scenario/$case_id/status.txt"
+    status="$RESULT_ROOT/$scenario/$case_id/status.txt"
     if grep -q '^COMPLETED ' "$status" 2>/dev/null; then
       continue
     fi
@@ -34,4 +36,3 @@ for scenario in \
     fi
   done
 done
-

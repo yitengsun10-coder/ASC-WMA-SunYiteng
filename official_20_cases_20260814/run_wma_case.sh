@@ -8,20 +8,24 @@ fi
 
 SCENARIO=$1
 CASE_ID=$2
-BASE=/root/autodl-tmp/asc26
-PROJ="$BASE/repos/unifolm-world-model-action"
-TASK="$BASE/repos/ASC26-Embodied-World-Model-Optimization"
-ENV="$BASE/envs/wma26"
+BASE=${WMA_BASE:-/root/autodl-tmp/asc26}
+PROJ=${WMA_PROJECT:-"$BASE/repos/unifolm-world-model-action"}
+TASK=${WMA_TASK:-"$BASE/repos/ASC26-Embodied-World-Model-Optimization"}
+ENV=${WMA_ENV_DIR:-"$BASE/envs/wma26"}
+RESULT_ROOT=${WMA_RESULT_ROOT:-"$BASE/results/wma"}
+CONDA_SH=${CONDA_SH:-/root/miniconda3/etc/profile.d/conda.sh}
 CASE="$PROJ/$SCENARIO/$CASE_ID"
-RESULT="$BASE/results/wma/$SCENARIO/$CASE_ID"
+RESULT="$RESULT_ROOT/$SCENARIO/$CASE_ID"
 RUN_LOG="$RESULT/output.log"
 TIME_FILE="$RESULT/time.txt"
 GPU_LOG="$RESULT/gpu_usage.csv"
 STATUS_FILE="$RESULT/status.txt"
 
 mkdir -p "$RESULT"
-source "$BASE/environment_paths.sh"
-source /root/miniconda3/etc/profile.d/conda.sh
+if [[ -f "$BASE/environment_paths.sh" ]]; then
+  source "$BASE/environment_paths.sh"
+fi
+source "$CONDA_SH"
 conda activate "$ENV"
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
@@ -96,4 +100,3 @@ ffprobe -v error -show_entries format=filename,duration,size,bit_rate \
 
 cp -a "$RUN_LOG" "$CASE/output.log"
 printf 'COMPLETED %s video_id=%s pred=%s\n' "$(date -Is)" "$VIDEO_ID" "$(basename "$PRED")" > "$STATUS_FILE"
-
