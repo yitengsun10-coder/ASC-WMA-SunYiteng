@@ -1,13 +1,38 @@
 # ASC Embodied World Model 性能与质量优化记录
 
+## 2026年10月6日正式结果
+
+正式版本为 [`final_amp20_v4/`](final_amp20_v4/)，不是下文历史批次。
+完整20项新视频的官方评分和规格记录均通过，最低PSNR **25.8241672300 dB**，
+20项算术平均 **38.4393232909 dB**。统一FP16/AMP基线 **7830.488590281457 s**，
+v4精确推理总时 **6137.218386184424 s**，总加速 **1.2759018984738715×**，
+时间降低 **21.6240683397%**。固定50采样步、manifest轮数、512×320、8 fps及FP16，
+没有旧视频拼接、GT筛选或生成重试。
+
+原主程序因生成后的ffprobe PATH缺失退出1，精确推理计时已完整持久化；
+随后CPU补充评分与规格核验退出0。原退出码和异常日志原样保留，不能宣称原程序首次干净退出0。
+
+- [最终报告和20项指标表](final_report/)
+- [正式证据与复检入口](final_amp20_v4/README.md)
+- [量子任务官方CPU大规模结果](https://github.com/yitengsun10-coder/qibotn/tree/main/benchmarks/asc_large_cpu)
+
+本仓库提供正式参数、评分、精确计时、源码、20个v4视频哈希及原始日志。
+受当前网络上传重置影响，完整视频保存在已校验的本地正式材料包中，未发布到GitHub。
+原始输入包和大型权重不纳入Git仓库；本地完整提交包与固定版本权重恢复说明另行保存。
+仓库发布不等同于已经发送给老师或审核通过。
+
+## 历史实验记录
+
+以下单Case与2026年8月质量批次只作为历史分析，不用于本轮正式指标。
+
 - 学生：孙逸腾（240810010427）
 - 题目：Embodied World Model / WMA
 - 赛题仓库：https://github.com/ASC-Competition/ASC26-Embodied-World-Model-Optimization
 - 项目仓库：https://github.com/unitreerobotics/unifolm-world-model-action
-- 最终验收：20/20 案例完成，20/20 的 PSNR ≥ 25 dB
+- 旧批次质量验收：20/20 案例完成，20/20 的 PSNR ≥ 25 dB
 - 最低 PSNR：25.0749163 dB
 
-本仓库是轻量证据仓库。模型权重、数据集、完整 MP4 和 TensorBoard 大文件不上传；逐案例命令、日志、GPU 记录、PSNR、视频规格、状态和哈希均保留。
+模型权重、数据集、完整MP4和TensorBoard大文件不纳入Git；本地正式v4材料包保存全部20个视频。
 
 ## 一分钟验收
 
@@ -47,14 +72,14 @@ python tools/verify_evidence.py
 
 代码差异分别见 [`wma_single_optimization.patch`](wma_single_optimization.patch)、[`wma_second_optimization.patch`](wma_second_optimization.patch) 和最终边缘案例脚本 [`world_model_interaction_eta_schedule.py`](official_20_cases_20260814/wma_case1_evidence/switch3_late090/world_model_interaction_eta_schedule.py)。
 
-## 最终 20 案例验收
+## 历史 20 案例质量验收
 
 - [`wma_20case_final_summary.csv`](official_20_cases_20260814/wma_20case_final_summary.csv)：最终 20 行汇总。
 - [`FINAL_STATUS_20_OF_20.md`](official_20_cases_20260814/FINAL_STATUS_20_OF_20.md)：历史 19/20 与最终 20/20 的边界说明。
 - [`results/wma/`](official_20_cases_20260814/results/wma/)：每个案例的 `output.log`、`gpu_usage.csv`、`psnr_result.json`、状态、时间和视频探测信息。
 - [`switch3_late090/`](official_20_cases_20260814/wma_case1_evidence/switch3_late090/)：最后一个边缘案例的配置、补丁、评分和 SHA-256。
 
-最终统计：平均 40.561815 dB，最低 25.0749163 dB，最高 49.5623691 dB。历史原始参数 24.8489438 dB 和失败 seed 对照仍原样保留，没有覆盖或伪装。
+历史批次统计：平均40.561815 dB，最低25.0749163 dB，最高49.5623691 dB；这些不是正式v4指标。历史原始参数24.8489438 dB和失败seed对照原样保留。
 
 ## 复现命令
 

@@ -1,0 +1,5 @@
+{
+    "gt_video": "/root/autodl-tmp/wma26/unifolm-world-model-action/unitree_z1_stackbox/case2/unitree_z1_stackbox_case2.mp4",
+    "pred_video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_stackbox/case2/output/inference/15_full_fs4.mp4",
+    "psnr": 37.366399441181706
+}

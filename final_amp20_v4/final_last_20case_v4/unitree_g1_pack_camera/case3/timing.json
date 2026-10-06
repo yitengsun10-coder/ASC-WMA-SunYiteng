@@ -1,0 +1,16 @@
+{
+  "index": 3,
+  "scenario": "unitree_g1_pack_camera",
+  "case": "case3",
+  "elapsed_seconds": 332.5695211403072,
+  "returncode": 0,
+  "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_g1_pack_camera/case3/output/inference/100_full_fs6.mp4",
+  "psnr": 36.87691117389267,
+  "video_spec": {
+    "width": 512,
+    "height": 320,
+    "avg_frame_rate": "8/1",
+    "nb_read_frames": "176"
+  },
+  "video_spec_pass": true
+}

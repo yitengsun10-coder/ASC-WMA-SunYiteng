@@ -1,0 +1,7 @@
+Comparing:
+Ref: /root/autodl-tmp/wma26/unifolm-world-model-action/unitree_g1_pack_camera/case2/unitree_g1_pack_camera_case2.mp4
+Pred: /root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/baseline/unitree_g1_pack_camera/case2/output/inference/50_full_fs6.mp4
+------------------------------
+Video PSNR: 33.9099 dB
+------------------------------
+Result saved to /root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/baseline/unitree_g1_pack_camera/case2/psnr.json

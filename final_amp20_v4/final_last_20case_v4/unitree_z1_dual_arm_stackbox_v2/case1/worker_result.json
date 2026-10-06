@@ -1,0 +1,13 @@
+{
+  "scenario": "unitree_z1_dual_arm_stackbox_v2",
+  "case": "case1",
+  "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox_v2/case1/output/inference/5_full_fs4.mp4",
+  "returncode": 0,
+  "worker_seconds_including_imports": 445.7384227067232,
+  "sampling_rng": {
+    "reset": true,
+    "cpu_rng_sha256": "b04f168bb97ae5f0758f525c6b0e928d866ad2619a254710db893e71bd54e1e5",
+    "cuda_rng_sha256": "7ce51663c5b98c7e383cb7ca11e5171bf9d32dcad0fa33f8c831a5ddb1abdf3e"
+  },
+  "video_sha256": "7c5ce8ddb5adec1342ffd504ab9eb70cc724a9f552288af93bb30df6ea01f5b8"
+}

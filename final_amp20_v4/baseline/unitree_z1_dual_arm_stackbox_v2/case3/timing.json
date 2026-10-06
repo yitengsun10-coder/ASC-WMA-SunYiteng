@@ -1,0 +1,10 @@
+{
+  "index": 15,
+  "scenario": "unitree_z1_dual_arm_stackbox_v2",
+  "case": "case3",
+  "elapsed_seconds": 437.3412769623101,
+  "returncode": 0,
+  "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/baseline/unitree_z1_dual_arm_stackbox_v2/case3/output/inference/25_full_fs4.mp4",
+  "psnr_returncode": 0,
+  "psnr": 33.60435940746868
+}

@@ -1,0 +1,10 @@
+{
+  "index": 3,
+  "scenario": "unitree_g1_pack_camera",
+  "case": "case3",
+  "elapsed_seconds": 421.89707858487964,
+  "returncode": 0,
+  "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/baseline/unitree_g1_pack_camera/case3/output/inference/100_full_fs6.mp4",
+  "psnr_returncode": 0,
+  "psnr": 30.32474777022945
+}

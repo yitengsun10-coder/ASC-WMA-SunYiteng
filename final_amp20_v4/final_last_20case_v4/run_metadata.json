@@ -1,0 +1,11 @@
+{
+  "policy": "One generation per case; no candidate selection or retries. Optional fixed isolated deterministic edge path.",
+  "isolated_stable_edge": true,
+  "precision": "FP16 autocast",
+  "torch_version": "2.3.1+cu121",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_threads": 8,
+  "manifest_sha256": "41b1ca7228af360882ba5a31b8dee670ec3b0a90d804c1a85f18052e1115ff5b",
+  "module_sha256": "91de389f84e19da029dbefe14f64c3beb01b900029eb3510f640078c78e6866b",
+  "timer": "perf_counter from first Python statements through all final video writes, before PSNR scoring; Python imports and model initialization included."
+}

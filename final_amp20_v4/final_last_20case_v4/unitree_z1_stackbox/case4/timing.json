@@ -1,0 +1,16 @@
+{
+  "index": 20,
+  "scenario": "unitree_z1_stackbox",
+  "case": "case4",
+  "elapsed_seconds": 364.19320541247725,
+  "returncode": 0,
+  "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_stackbox/case4/output/inference/35_full_fs4.mp4",
+  "psnr": 46.97449011116993,
+  "video_spec": {
+    "width": 512,
+    "height": 320,
+    "avg_frame_rate": "8/1",
+    "nb_read_frames": "192"
+  },
+  "video_spec_pass": true
+}

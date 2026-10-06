@@ -1,0 +1,173 @@
+{
+  "completed_cases": 20,
+  "inference_total_seconds": 6137.218386184424,
+  "records": [
+    {
+      "index": 1,
+      "scenario": "unitree_g1_pack_camera",
+      "case": "case1",
+      "elapsed_seconds": 400.37203830480576,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_g1_pack_camera/case1/output/inference/0_full_fs6.mp4"
+    },
+    {
+      "index": 2,
+      "scenario": "unitree_g1_pack_camera",
+      "case": "case2",
+      "elapsed_seconds": 331.98400040715933,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_g1_pack_camera/case2/output/inference/50_full_fs6.mp4"
+    },
+    {
+      "index": 3,
+      "scenario": "unitree_g1_pack_camera",
+      "case": "case3",
+      "elapsed_seconds": 332.5695211403072,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_g1_pack_camera/case3/output/inference/100_full_fs6.mp4"
+    },
+    {
+      "index": 4,
+      "scenario": "unitree_g1_pack_camera",
+      "case": "case4",
+      "elapsed_seconds": 339.94229919090867,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_g1_pack_camera/case4/output/inference/200_full_fs6.mp4"
+    },
+    {
+      "index": 5,
+      "scenario": "unitree_z1_dual_arm_cleanup_pencils",
+      "case": "case1",
+      "elapsed_seconds": 247.7519113905728,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_cleanup_pencils/case1/output/inference/0_full_fs4.mp4"
+    },
+    {
+      "index": 6,
+      "scenario": "unitree_z1_dual_arm_cleanup_pencils",
+      "case": "case2",
+      "elapsed_seconds": 243.43117209151387,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_cleanup_pencils/case2/output/inference/50_full_fs4.mp4"
+    },
+    {
+      "index": 7,
+      "scenario": "unitree_z1_dual_arm_cleanup_pencils",
+      "case": "case3",
+      "elapsed_seconds": 242.72565834596753,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_cleanup_pencils/case3/output/inference/100_full_fs4.mp4"
+    },
+    {
+      "index": 8,
+      "scenario": "unitree_z1_dual_arm_cleanup_pencils",
+      "case": "case4",
+      "elapsed_seconds": 242.86294427886605,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_cleanup_pencils/case4/output/inference/200_full_fs4.mp4"
+    },
+    {
+      "index": 9,
+      "scenario": "unitree_z1_dual_arm_stackbox",
+      "case": "case1",
+      "elapsed_seconds": 211.2878328934312,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox/case1/output/inference/5_full_fs4.mp4"
+    },
+    {
+      "index": 10,
+      "scenario": "unitree_z1_dual_arm_stackbox",
+      "case": "case2",
+      "elapsed_seconds": 213.2036330513656,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox/case2/output/inference/15_full_fs4.mp4"
+    },
+    {
+      "index": 11,
+      "scenario": "unitree_z1_dual_arm_stackbox",
+      "case": "case3",
+      "elapsed_seconds": 211.89750355109572,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox/case3/output/inference/25_full_fs4.mp4"
+    },
+    {
+      "index": 12,
+      "scenario": "unitree_z1_dual_arm_stackbox",
+      "case": "case4",
+      "elapsed_seconds": 212.17664581537247,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox/case4/output/inference/35_full_fs4.mp4"
+    },
+    {
+      "scenario": "unitree_z1_dual_arm_stackbox_v2",
+      "case": "case1",
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox_v2/case1/output/inference/5_full_fs4.mp4",
+      "returncode": 0,
+      "worker_seconds_including_imports": 445.7384227067232,
+      "sampling_rng": {
+        "reset": true,
+        "cpu_rng_sha256": "b04f168bb97ae5f0758f525c6b0e928d866ad2619a254710db893e71bd54e1e5",
+        "cuda_rng_sha256": "7ce51663c5b98c7e383cb7ca11e5171bf9d32dcad0fa33f8c831a5ddb1abdf3e"
+      },
+      "video_sha256": "7c5ce8ddb5adec1342ffd504ab9eb70cc724a9f552288af93bb30df6ea01f5b8",
+      "elapsed_seconds": 448.1442224122584,
+      "index": 13
+    },
+    {
+      "index": 14,
+      "scenario": "unitree_z1_dual_arm_stackbox_v2",
+      "case": "case2",
+      "elapsed_seconds": 332.1542080268264,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox_v2/case2/output/inference/15_full_fs4.mp4"
+    },
+    {
+      "index": 15,
+      "scenario": "unitree_z1_dual_arm_stackbox_v2",
+      "case": "case3",
+      "elapsed_seconds": 332.6489340662956,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox_v2/case3/output/inference/25_full_fs4.mp4"
+    },
+    {
+      "index": 16,
+      "scenario": "unitree_z1_dual_arm_stackbox_v2",
+      "case": "case4",
+      "elapsed_seconds": 336.40692100673914,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_dual_arm_stackbox_v2/case4/output/inference/35_full_fs4.mp4"
+    },
+    {
+      "index": 17,
+      "scenario": "unitree_z1_stackbox",
+      "case": "case1",
+      "elapsed_seconds": 364.827254217118,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_stackbox/case1/output/inference/5_full_fs4.mp4"
+    },
+    {
+      "index": 18,
+      "scenario": "unitree_z1_stackbox",
+      "case": "case2",
+      "elapsed_seconds": 363.06742544844747,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_stackbox/case2/output/inference/15_full_fs4.mp4"
+    },
+    {
+      "index": 19,
+      "scenario": "unitree_z1_stackbox",
+      "case": "case3",
+      "elapsed_seconds": 361.8082965500653,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_stackbox/case3/output/inference/25_full_fs4.mp4"
+    },
+    {
+      "index": 20,
+      "scenario": "unitree_z1_stackbox",
+      "case": "case4",
+      "elapsed_seconds": 364.19320541247725,
+      "returncode": 0,
+      "video": "/root/autodl-tmp/wma26/unifolm-world-model-action/results/formal_20case_020/final_last_20case_v4/unitree_z1_stackbox/case4/output/inference/35_full_fs4.mp4"
+    }
+  ]
+}

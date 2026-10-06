@@ -1,0 +1,3 @@
+Command exited with non-zero status 1
+full_process_seconds=6141.72
+exit_status=1
